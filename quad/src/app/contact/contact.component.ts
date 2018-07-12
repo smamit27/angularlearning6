@@ -6,8 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent implements OnInit {
-
-  constructor() { }
+  allowDisabled = false;
+  constructor() { 
+    setTimeout(() =>{
+      this.allowDisabled = true;
+    },12000);
+  }
 
   ngOnInit() {
   }

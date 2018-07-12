@@ -1,5 +1,5 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div class="container">
+<!-- <div class="container">
   <div class="jumbotron">
     <h1>Welcome</h1>
     <h2>Angular & Bootstrap Demo</h2>
@@ -16,8 +16,14 @@
     <li><a href="/">Home</a></li>
     <li><a routerLink ="/contact">Contact</a></li>
     <li> <a [routerLink] = "['/servers']">Server</a></li>
+    <li> <a [routerLink] = "['/about']">About</a></li>
+
   </ul>
 <div style="text-align:center">
 <router-outlet></router-outlet>
+</div> -->
+<!--Data Binding -->
+<div class="container">
+  <app-home></app-home>
+  <app-servers *ngFor="let serverElement of serverElements" [element]= 'serverElement' ></app-servers>
 </div>
-
