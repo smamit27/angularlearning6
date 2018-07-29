@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  serverElements = [{type: 'server',name: 'hello',content: 'Hello worll'}];
+  serverElements = [];
+
+  onSelectSer(feature) {
+    debugger;
+    this.serverElements.push(feature);
+
+  }
 }

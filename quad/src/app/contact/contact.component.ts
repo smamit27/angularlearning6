@@ -6,12 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent implements OnInit {
-  allowDisabled = false;
-  constructor() { 
-    setTimeout(() =>{
-      this.allowDisabled = true;
-    },12000);
-  }
+ addNumber =false;
+oddNumber = [1,3,5];
+evenNumber = [2,4];
+
 
   ngOnInit() {
   }

@@ -1,4 +1,25 @@
-<p>
-  contact works!
-</p>
-<button class="btn btn-primary" [disabled] ='!allowDisabled'>Hello</button>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <button 
+        class="btn btn-primary" 
+        (click)= 'addNumber = !addNumber'>Only show odd number</button>
+    <br/><br/>
+    <p AppBasicHighlightDirective>Hello Directive</p>
+
+<p AppBetterHighlightDirective>Better Highligh</p>    <ul class="list-group" >
+      <div *ngIf="addNumber">
+        <li class="list-group-item" [ngClass]='{ADD : odd % 2 !== 0}' *ngFor="let odd of oddNumber">
+          {{odd}}
+        </li>
+    </div>
+      <div *ngIf="!addNumber">
+        <li class="list-group-item" [ngClass]='{ADD : even % 2 !== 0}' *ngFor="let even of evenNumber">
+            {{even}}
+    
+          </li>
+     </div>
+    </ul>
+    </div>
+  </div>
+</div>

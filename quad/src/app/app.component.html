@@ -23,7 +23,14 @@
 <router-outlet></router-outlet>
 </div> -->
 <!--Data Binding -->
-<div class="container">
-  <app-home></app-home>
+<!-- <div class="container">
+  <app-home (serverCreated)= 'onSelectSer($event)'></app-home>
   <app-servers *ngFor="let serverElement of serverElements" [element]= 'serverElement' ></app-servers>
-</div>
+</div> -->
+<!-- <app-about></app-about> -->
+<p>{{'Productions' | shorten}}</p>
+<app-reactive></app-reactive>
+<hr>
+<p class="http">Http</p>
+<hr>
+<app-firebase></app-firebase>

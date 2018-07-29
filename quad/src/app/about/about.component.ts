@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { NgForm } from '@angular/forms';
 @Component({
     selector :'app-about',
     templateUrl: './about.component.html',
@@ -6,5 +7,15 @@ import { Component } from '@angular/core';
 })
 
 export class AboutComponent {
-    
+    @ViewChild('formControl') formValidate:NgForm;
+    defaultValidate = 'teacher';
+
+    // onSubmit(form: NgForm) {
+    //     console.log(form);
+
+    // }
+    onSubmit() {
+        debugger;
+        console.log(this.formValidate);
+    }
 }
